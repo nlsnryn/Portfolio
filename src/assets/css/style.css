@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-800 break-words antialiased font-Roboto;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+}
+
+h2 {
+  @apply font-bold text-2xl tracking-tight;
+}
+
+p,
+h1 {
+  @apply text-gray-300;
+}
+
+a {
+  @apply text-neon-green;
+}
