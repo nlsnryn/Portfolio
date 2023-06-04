@@ -11,6 +11,7 @@
         <div
           class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-7"
         >
+          <!--Fixed-->
           <img
             src="../assets/images/SKILLABLE.png"
             alt="skillable"
