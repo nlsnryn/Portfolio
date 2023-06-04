@@ -12,7 +12,7 @@
           class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-7"
         >
           <img
-            src="../assets/images/SKILLABLE.PNG"
+            src="../assets/images/SKILLABLE.png"
             alt="skillable"
             loading="lazy"
             class="h-auto w-96 object-cover md:m-3 rounded-lg md:rounded-lg hover:scale-105 transition-all duration-200"
