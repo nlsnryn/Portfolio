@@ -1,58 +1,55 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import myProjects from "../data/projects.js";
+
+const projects = ref(myProjects);
+</script>
 
 <template>
   <!-- Projects -->
   <main>
     <div class="flex flex-col justify-center items-center">
-      <h1 class="text-xl text-white font-semibold uppercase">
+      <h1 class="text-xl text-gray-300 font-semibold uppercase">
         Here are some projects I worked with.
       </h1>
       <div class="text-white w-[350px] md:w-[730px] mt-10">
         <div
-          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-7"
+          v-for="project in projects"
+          :key="project.id"
+          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-5 md:gap-7"
         >
           <!--Fixed-->
-          <img
-            src="../assets/images/SKILLABLE.png"
-            alt="skillable"
-            loading="lazy"
-            class="h-auto w-96 object-cover md:m-3 rounded-lg md:rounded-lg hover:scale-105 transition-all duration-200"
-          />
+          <div class="w-full md:w-1/2">
+            <img
+              :src="project.image"
+              :alt="project.title"
+              loading="lazy"
+              class="h-52 w-full object-cover md:m-3 rounded-lg md:rounded-lg hover:scale-105 transition-all duration-200"
+            />
+          </div>
           <div
-            class="ml-3 md:ml-0 flex flex-col justify-start items-start pl-1 pr-3"
+            class="w-full md:w-1/2 ml-3 md:ml-0 flex flex-col justify-start items-start pl-1 pr-3 mt-2"
           >
             <h1 class="mt-3 text-white text-lg font-bold uppercase">
-              Skillable
+              {{ project.title }}
             </h1>
-            <p class="text-xs mt-1">
-              It is a application that you can create account and login. You can
-              also store, update and delete some notes or skills.
-            </p>
-            <div class="flex gap-2 my-4 flex-wrap">
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">Vue</p>
-              </div>
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">Tailwind CSS</p>
-              </div>
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">Laravel</p>
-              </div>
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">Rest Api</p>
-              </div>
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">Pinia</p>
-              </div>
-              <div class="border-neon-green border-2 px-2 py-1 rounded-full">
-                <p class="text-xs text-neon-green">MySQL</p>
+            <p class="text-xs mt-1">{{ project.description }}</p>
+            <div class="flex gap-2 my-4 flex-wrap mr-5">
+              <div
+                v-for="(tech, index) in project.technologies"
+                :key="index"
+                class="border-neon-green border-2 px-2 py-1 rounded-full"
+              >
+                <p class="text-xs text-neon-green">{{ tech }}</p>
               </div>
             </div>
             <div
-              class="flex items-center group cursor-pointer mb-5 md:mb-2 md:-mt-1"
+              class="flex items-center gap-2 group cursor-pointer mb-5 md:mb-2 md:-mt-1"
             >
-              <div
-                class="bg-neutral-800 p-1 px-2 py-1 flex items-center gap-1 rounded-md border-2"
+              <a
+                :href="project.repository"
+                target="_blank"
+                class="bg-neutral-800 p-1 px-3 py-1.5 flex items-center gap-1 mt-1 rounded-md hover:-translate-y-1 transition-all duration-200"
               >
                 <img
                   src="../assets/images/github-mark-white.svg"
@@ -60,7 +57,16 @@
                   class="h-auto w-5"
                 />
                 <p class="uppercase text-[10px]">Code</p>
-              </div>
+              </a>
+
+              <a
+                v-if="project.demo"
+                :href="project.demo"
+                target="_blank"
+                class="bg-neutral-800 p-1 px-3 py-2 flex items-center gap-1 mt-1 rounded-md hover:-translate-y-1 transition-all duration-200"
+                ><i class="fa-solid fa-link text-white"></i>
+                <p class="uppercase text-[10px]">Demo</p></a
+              >
             </div>
           </div>
         </div>

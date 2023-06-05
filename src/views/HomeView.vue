@@ -1,18 +1,15 @@
 <script setup>
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const pfp = ref(null);
 
-const texts = [
-  " WORK TOGETHER TO BUILD SOMETHING GREAT!",
-  " collaborate, innovate, and code",
-  " build backend brilliance",
-];
+const texts = [" collaborate", " innovate", " code!"];
 const delay = 2000;
 let counter = 0;
 const typingText = ref("");
+const isCursorVisible = ref(true);
 
 const type = () => {
   const text = texts[counter];
@@ -48,8 +45,18 @@ const type = () => {
   typeCharacter();
 };
 
+const toggleCursor = () => {
+  isCursorVisible.value = !isCursorVisible.value;
+  setTimeout(toggleCursor, 500);
+};
+
+onUnmounted(() => {
+  isCursorVisible.value = false;
+});
+
 onMounted(() => {
   type();
+  toggleCursor();
 });
 
 onMounted(() => {
@@ -96,16 +103,17 @@ onMounted(() => {
   <main class="pb-20">
     <!-- Hero Section -->
     <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-14"
+      class="flex flex-col-reverse md:flex-row justify-center items-center mt-7"
     >
       <div class="text-white w-[350px] md:w-[450px]">
         <h1
-          class="font-bold text-3xl md:text-5xl tracking-tight mb-1 glitch text-white"
+          class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white"
         >
           Nelson Ryan Arabit
         </h1>
-        <h2 class="text-lg mt-2 glitch">
-          Web Developer | <span class="text-neon-green">Vue and Laravel</span>
+        <h2 class="text-lg mt-2">
+          Web Developer |
+          <span class="text-neon-green glitch">Vue and Laravel</span>
         </h2>
         <p class="mt-10 text-left">
           I am a <strong>web developer</strong> who dreams of entering and
@@ -122,20 +130,47 @@ onMounted(() => {
         ref="pfp"
         class="mb-10 md:mb-0 h-[160px] w-[160px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10 object-cover"
         src="../components/icons/Portfolio.png"
-        alt="Paul Valladares"
+        alt="Nelson"
       />
+    </div>
+
+    <!-- Resume -->
+    <div
+      class="flex flex-col-reverse md:flex-row justify-center items-center mt-3"
+    >
+      <div class="text-white w-[350px] md:w-[730px]">
+        <div
+          class="group text-gray-300 border-2 hover:border-neon-green w-fit text-[11px] flex items-center justify-center font-medium rounded-lg bg-transparent px-3 md:px-4 py-1.5 cursor-pointer transition-all ease-in-out duration-200"
+        >
+          <h1
+            class="text-sm md:text-lg group-hover:text-neon-green tracking-tighter"
+          >
+            Resume
+          </h1>
+          <i
+            class="fa-solid fa-download group-hover:text-neon-green text-sm md:text-lg ml-2"
+          ></i>
+        </div>
+      </div>
     </div>
 
     <!-- Let work -->
     <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-16 md:mt-28"
+      class="flex flex-col-reverse md:flex-row justify-center items-center mt-16 md:mt-20"
     >
       <div class="text-white w-[350px] md:w-[730px]">
         <h1
           id="text-animation"
-          class="text-2xl font-semibold tracking-wider text-white uppercase"
+          class="text-2xl md:text-3xl font-semibold tracking-wider text-white uppercase"
         >
-          LET'S {{ typingText }}
+          LET'S
+          <span class="text-3xl md:text-4xl text-neon-green">{{
+            typingText
+          }}</span>
+          <span
+            class="cursor"
+            :class="{ 'cursor-blink': isCursorVisible }"
+          ></span>
         </h1>
       </div>
     </div>
@@ -144,7 +179,7 @@ onMounted(() => {
 
     <div class="flex flex-col-reverse md:flex-row justify-center items-center">
       <div class="text-white w-[350px] md:w-[730px]">
-        <div class="flex flex-wrap items-center gap-x-5 mt-10 justify-center">
+        <div class="flex flex-wrap items-center gap-x-5 mt-5 justify-start">
           <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
           <i class="fa-brands fa-css3-alt text-4xl text-blue-600"></i>
           <i class="fa-brands fa-square-js text-4xl text-yellow-500"></i>
@@ -203,3 +238,28 @@ onMounted(() => {
     </div>
   </main>
 </template>
+
+<style>
+.cursor {
+  width: 2px;
+  height: 1.2em;
+  background-color: white;
+  display: inline-block;
+}
+
+.cursor-blink {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
