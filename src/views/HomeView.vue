@@ -129,7 +129,7 @@ onMounted(() => {
       <img
         ref="pfp"
         class="mb-10 md:mb-0 h-[160px] w-[160px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10 object-cover"
-        src="../components/icons/Portfolio.png"
+        src="../assets/images/nkwelyo.jpg"
         alt="Nelson"
       />
     </div>

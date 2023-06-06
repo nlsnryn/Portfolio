@@ -11,8 +11,8 @@ const textContact = ref(["C", "o", "n", "t", "a", "c", "t", " ", "M", "E"]);
       <div class="flex flex-col justify-center items-center">
         <img
           ref="pfp"
-          class="mb-10 md:mb-0 h-[160px] w-[160px] rounded-full object-cover"
-          src="../components/icons/Portfolio.png"
+          class="mb-10 md:mb-0 h-[300px] w-[240px] rounded object-cover"
+          src="../assets/images/upuan.jpg"
           alt="Paul Valladares"
         />
         <h1 class="text-3xl text-gray-300 font-semibold mt-3">

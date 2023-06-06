@@ -2,8 +2,19 @@ import Skillable from "@/assets/images/SKILLABLE.png";
 import Weather from "../assets/images/Weather.png";
 import QuizApp from "../assets/images/QuizApp.png";
 import Notes from "../assets/images/Notes.png";
+import TPJ from "../assets/images/capstone.png";
 
 export default [
+  {
+    id: 1,
+    title: "MIS for TPJ Farm",
+    description:
+      "A desktop application for TPJ Farm company that can add, monitor their livestocks and reports.",
+    technologies: ["VB.Net", "MySQL", "Guna UI"],
+    repository: "https://github.com/nlsnryn/Capstone-Project",
+    image: TPJ,
+    demo: false,
+  },
   {
     id: 1,
     title: "Skillable",
