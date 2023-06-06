@@ -2,6 +2,48 @@
 import { ref } from "vue";
 import myProjects from "../data/projects.js";
 
+const title = ref([
+  "F",
+  "r",
+  "o",
+  "m",
+  " ",
+  "V",
+  "i",
+  "s",
+  "i",
+  "o",
+  "n",
+  " ",
+  "t",
+  "o",
+  " ",
+  "R",
+  "e",
+  "a",
+  "l",
+  "i",
+  "t",
+  "y",
+  ":",
+  " ",
+  "P",
+  "r",
+  "o",
+  "j",
+  "e",
+  "c",
+  "t",
+  " ",
+  "S",
+  "h",
+  "o",
+  "w",
+  "c",
+  "a",
+  "s",
+  "e",
+]);
 const projects = ref(myProjects);
 </script>
 
@@ -9,9 +51,23 @@ const projects = ref(myProjects);
   <!-- Projects -->
   <main>
     <div class="flex flex-col justify-center items-center">
-      <h1 class="text-xl text-gray-300 font-semibold uppercase">
-        Here are some projects I worked with.
+      <h1
+        class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
+      >
+        <span
+          v-for="(letter, index) in title"
+          :key="index"
+          class="hover:text-neon-green"
+          >{{ letter }}</span
+        >
       </h1>
+      <p
+        class="max-w-2xl text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
+      >
+        These projects are more than just work; they represent a journey of
+        growth, learning, and achievement. Join me as we explore the milestones
+        and success stories that have shaped my career.
+      </p>
       <div class="text-white w-[350px] md:w-[730px] mt-10">
         <div
           v-for="project in projects"
@@ -24,7 +80,7 @@ const projects = ref(myProjects);
               :src="project.image"
               :alt="project.title"
               loading="lazy"
-              class="h-52 w-full object-cover md:m-3 rounded-lg md:rounded-lg hover:scale-105 transition-all duration-200"
+              class="h-52 w-full object-cover md:m-3 rounded-t-lg md:rounded-lg hover:scale-105 transition-all duration-200"
             />
           </div>
           <div
