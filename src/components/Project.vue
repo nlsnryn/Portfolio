@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import myProjects from "../data/projects.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -52,9 +52,8 @@ const projects = ref(myProjects);
 </script>
 
 <template>
-  <!-- Projects -->
-  <main id="projects">
-    <div class="flex flex-col justify-center items-center py-28">
+  <main id="projects" class="">
+    <div class="flex flex-col py-28 text-center">
       <h1
         data-aos="fade-right"
         class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
@@ -67,19 +66,18 @@ const projects = ref(myProjects);
         >
       </h1>
       <p
-        data-aos="fade-left"
-        class="max-w-2xl text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
+        data-aos="fade-right"
+        class="text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
       >
         These projects are more than just work; they represent a journey of
         growth, learning, and achievement.
       </p>
-      <div class="text-white w-[350px] md:w-[730px] mt-10">
+      <div class="text-white mt-10">
         <div
           v-for="project in projects"
           :key="project.id"
-          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-5 md:gap-7 mt-10"
+          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden mb-5 md:gap-7 mt-10"
         >
-          <!--Fixed-->
           <div class="w-full md:w-1/2">
             <img
               :src="project.image"
@@ -89,7 +87,7 @@ const projects = ref(myProjects);
             />
           </div>
           <div
-            class="w-full md:w-1/2 ml-3 md:ml-0 flex flex-col justify-start items-start pl-1 pr-3 mt-2"
+            class="w-full md:w-1/2 ml-3 md:ml-0 flex flex-col text-start justify-start items-start pl-1 pr-3 mt-2"
           >
             <h1 class="mt-3 text-white text-lg font-bold uppercase">
               {{ project.title }}

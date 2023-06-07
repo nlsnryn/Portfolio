@@ -100,21 +100,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="home">
+  <main id="home" class="">
     <!-- Hero Section -->
-    <div
-      class="flex flex-col-reverse md:flex-row justify-center pt-32 items-center"
-    >
-      <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        class="text-white w-[350px] md:w-[450px]"
-      >
+    <div class="flex flex-col-reverse md:flex-row pt-32">
+      <div data-aos="fade-right" data-aos-duration="1000" class="text-white">
         <h1
           class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white"
         >
@@ -145,99 +134,82 @@ onMounted(() => {
     </div>
 
     <!-- Resume -->
-    <div
-      data-aos="fade-right"
-      data-aos-duration="2000"
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-5"
-    >
-      <div class="text-white w-[350px] md:w-[730px]">
-        <a
-          href="../assets/images/capstone.png"
-          download
-          class="group text-gray-300 border-2 hover:border-neon-green w-fit text-[11px] flex items-center justify-center font-medium rounded-lg bg-transparent px-3 md:px-4 py-1.5 cursor-pointer transition-all ease-in-out duration-200"
+    <div data-aos="fade-right" data-aos-duration="2000" class="mt-5">
+      <a
+        href="../assets/images/capstone.png"
+        download
+        class="group text-gray-300 border-2 hover:border-neon-green w-fit text-[11px] flex items-center justify-center font-medium rounded-lg bg-transparent px-3 md:px-4 py-1.5 cursor-pointer transition-all ease-in-out duration-200"
+      >
+        <h1
+          class="text-sm md:text-lg group-hover:text-neon-green tracking-tighter"
         >
-          <h1
-            class="text-sm md:text-lg group-hover:text-neon-green tracking-tighter"
-          >
-            Resume
-          </h1>
-          <i
-            class="fa-solid fa-download group-hover:text-neon-green text-sm md:text-lg ml-2"
-          ></i>
-        </a>
-      </div>
+          Resume
+        </h1>
+        <i
+          class="fa-solid fa-download group-hover:text-neon-green text-sm md:text-lg ml-2"
+        ></i>
+      </a>
     </div>
 
     <!-- Let work -->
-    <div
-      data-aos="fade-up"
-      data-aos-duration="2000"
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-16 md:mt-24"
-    >
-      <div class="text-white w-[350px] md:w-[730px]">
-        <h1
-          id="text-animation"
-          class="text-2xl md:text-3xl font-semibold tracking-wider text-white uppercase"
-        >
-          LET'S
-          <span class="text-3xl md:text-4xl text-neon-green">{{
-            typingText
-          }}</span>
-          <span
-            class="cursor"
-            :class="{ 'cursor-blink': isCursorVisible }"
-          ></span>
-        </h1>
-      </div>
+    <div data-aos="fade-up" data-aos-duration="2000" class="mt-16 md:mt-24">
+      <h1
+        id="text-animation"
+        class="text-2xl md:text-3xl font-semibold tracking-wider text-white uppercase"
+      >
+        LET'S
+        <span class="text-3xl md:text-4xl text-neon-green">{{
+          typingText
+        }}</span>
+        <span
+          class="cursor"
+          :class="{ 'cursor-blink': isCursorVisible }"
+        ></span>
+      </h1>
     </div>
 
     <!-- Tech Stack -->
 
-    <div
-      data-aos="fade-up"
-      data-aos-duration="2000"
-      class="flex flex-col-reverse md:flex-row justify-center items-center"
-    >
-      <div class="text-white w-[350px] md:w-[730px]">
-        <div class="flex flex-wrap items-center gap-x-5 mt-5 justify-start">
-          <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
-          <i class="fa-brands fa-css3-alt text-4xl text-blue-600"></i>
-          <i class="fa-brands fa-square-js text-4xl text-yellow-500"></i>
-          <i class="fa-brands fa-laravel text-4xl text-red-500"></i>
-          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-            <img
-              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-              alt="tailwind"
-              width="40"
-              height="40"
-            />
-          </a>
-          <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-              alt="vuejs"
-              width="35"
-              height="35"
-            />
-          </a>
-          <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-            <img
-              src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-              alt="git"
-              width="40"
-              height="40"
-            />
-          </a>
+    <div data-aos="fade-up" data-aos-duration="2000">
+      <div class="flex flex-wrap items-center gap-x-5 mt-5 justify-start">
+        <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+        <i class="fa-brands fa-css3-alt text-4xl text-blue-600"></i>
+        <i class="fa-brands fa-square-js text-4xl text-yellow-500"></i>
+        <i class="fa-brands fa-laravel text-4xl text-red-500"></i>
+        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+            alt="tailwind"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+            alt="vuejs"
+            width="35"
+            height="35"
+          />
+        </a>
+        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+            alt="git"
+            width="40"
+            height="40"
+          />
+        </a>
 
-          <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-              alt="mysql"
-              width="40"
-              height="40"
-            />
-          </a>
-          <!-- <a href="https://www.php.net" target="_blank" rel="noreferrer">
+        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+            alt="mysql"
+            width="40"
+            height="40"
+          />
+        </a>
+        <!-- <a href="https://www.php.net" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
               alt="php"
@@ -245,15 +217,14 @@ onMounted(() => {
               height="40"
             />
           </a> -->
-          <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-              alt="react"
-              width="40"
-              height="40"
-            />
-          </a>
-        </div>
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+            alt="react"
+            width="40"
+            height="40"
+          />
+        </a>
       </div>
     </div>
   </main>
