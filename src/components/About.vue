@@ -5,7 +5,7 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
 </script>
 
 <template>
-  <div id="about" class="pb-20 pt-36">
+  <div id="about" class="pb-20 pt-24">
     <h1
       class="text-gray-300 font-semibold uppercase text-center tracking-tighter text-2xl"
     >
@@ -62,7 +62,7 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
           class="text-xs list-disc list-inside text-gray-300 font-medium uppercase mt-5 space-y-2"
         >
           <li>2nd yr to 4th yr Dean's Lister</li>
-          <li>Capstone Programmer</li>
+          <li>Capstone project Programmer</li>
           <li>QPA 1.46</li>
         </ul>
       </div>

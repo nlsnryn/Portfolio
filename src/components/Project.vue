@@ -53,9 +53,8 @@ const projects = ref(myProjects);
 
 <template>
   <main id="projects" class="">
-    <div class="flex flex-col py-28 text-center">
+    <div class="flex flex-col pt-16 pb-28 text-center">
       <h1
-        data-aos="fade-right"
         class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
       >
         <span
@@ -66,7 +65,6 @@ const projects = ref(myProjects);
         >
       </h1>
       <p
-        data-aos="fade-right"
         class="text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
       >
         These projects are more than just work; they represent a journey of

@@ -8,17 +8,15 @@ const socials = ref(socialsData);
 </script>
 
 <template>
-  <div id="socials" class="flex flex-col">
-    <div class="grid justify-items-center">
-      <img
-        src="../assets/images/upuan.jpg"
-        alt=""
-        class="h-auto w-40 rounded-2xl hover:scale-150 z-10 transition-all duration-200"
-      />
-    </div>
+  <div id="socials" class="flex flex-col relative mt-20">
+    <img
+      src="../assets/images/nobg1.png"
+      alt=""
+      class="h-auto w-[30rem] grayscale opacity-20 absolute -top-36 right-[center]"
+    />
     <div class="flex flex-col justify-center items-center mt-10">
       <h1
-        class="text-2xl text-gray-300 font-semibold tracking-tighter uppercase"
+        class="text-2xl text-white font-semibold tracking-tighter uppercase z-10"
       >
         <span
           v-for="textLetter in textContact"
@@ -27,11 +25,15 @@ const socials = ref(socialsData);
           >{{ textLetter }}</span
         >
       </h1>
-      <p class="text-sm tracking-tighter font-semibold mb-7 text-center mt-5">
+      <p
+        class="text-sm max-w-sm tracking-tighter text-white font-semibold mb-7 text-center mt-5 z-10"
+      >
         Reach out to me on social media, and let's collaborate, innovate, and
         make magic happen!
       </p>
-      <SocialButton :socials="socials" />
+      <div class="flex gap-5 mt-5 z-10">
+        <SocialButton :socials="socials" />
+      </div>
     </div>
   </div>
 </template>

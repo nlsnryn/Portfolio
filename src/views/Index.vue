@@ -12,7 +12,7 @@ import Navbar from "@/components/Navbar.vue";
   >
     <Navbar />
   </div>
-  <div class="pb-10 mx-auto w-11/12 max-w-3xl">
+  <div class="pb-10 mx-auto w-11/12 max-w-3xl relative">
     <Home />
     <About />
     <Project />

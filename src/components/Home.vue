@@ -86,16 +86,16 @@ onMounted(() => {
     pulse: false,
   });
 
-  animate(
-    pfp.value,
-    { y: [-6, 6] },
-    {
-      duration: 2,
-      direction: "alternate",
-      repeat: 100,
-      easing: "ease-in-out",
-    }
-  );
+  // animate(
+  //   pfp.value,
+  //   { y: [-6, 6] },
+  //   {
+  //     duration: 2,
+  //     direction: "alternate",
+  //     repeat: 100,
+  //     easing: "ease-in-out",
+  //   }
+  // );
 });
 </script>
 
@@ -105,15 +105,15 @@ onMounted(() => {
     <div class="flex flex-col-reverse md:flex-row pt-32">
       <div data-aos="fade-right" data-aos-duration="1000" class="text-white">
         <h1
-          class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white"
+          class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white z-10"
         >
           Nelson Ryan Arabit
         </h1>
         <h2 class="text-lg mt-2">
           Web Developer |
-          <span class="text-neon-green glitch">Vue and Laravel</span>
+          <span class="text-neon-green glitch z-10">Vue and Laravel</span>
         </h2>
-        <p class="mt-10 max-w-md text-justify">
+        <p class="mt-10 max-w-md text-start z-10">
           I am a <strong>web developer</strong> who dreams of entering and
           working in the IT industry, utilizing my skills and knowledge in
           technology. I have chosen the path of
@@ -124,17 +124,14 @@ onMounted(() => {
         </p>
       </div>
       <img
-        data-aos="fade-left"
-        data-aos-duration="1000"
-        ref="pfp"
-        class="mb-10 md:mb-0 h-[160px] w-[160px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10 object-cover"
-        src="../assets/images/nkwelyo.jpg"
+        class="grayscale opacity-10 md:opacity-30 mb-10 md:mb-0 md:h-auto md:w-[23rem] absolute right-0 top-16 rounded-full ml-0 md:ml-10 object-cover self-center z-0"
+        src="../assets/images/nobg2.png"
         alt="Nelson"
       />
     </div>
 
     <!-- Resume -->
-    <div data-aos="fade-right" data-aos-duration="2000" class="mt-5">
+    <div class="mt-5">
       <a
         href="../assets/images/capstone.png"
         download
