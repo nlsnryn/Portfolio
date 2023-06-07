@@ -14,11 +14,6 @@ function navClick(navbars) {
 
 <template>
   <nav
-    data-aos="flip-right"
-    data-aos-duration="2000"
-    role="navigation"
-    aria-label="navigation"
-    id="top-nav"
     class="flex flex-col md:flex-row md:justify-center md:items-center gap-4 items-center py-5 w-full md:w-[740px] mx-auto fixed top-0 left-0 right-0 z-10"
   >
     <ul
