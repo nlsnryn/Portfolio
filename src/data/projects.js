@@ -3,6 +3,7 @@ import Weather from "../assets/images/Weather.png";
 import QuizApp from "../assets/images/QuizApp.png";
 import Notes from "../assets/images/Notes.png";
 import TPJ from "../assets/images/capstone.png";
+import Meme from "../assets/images/Memegen.png";
 
 export default [
   {
@@ -16,7 +17,7 @@ export default [
     demo: false,
   },
   {
-    id: 1,
+    id: 2,
     title: "Skillable",
     description:
       "It is a application that you can create account and login. You can also store, update and delete some notes or skills",
@@ -35,7 +36,7 @@ export default [
     demo: false,
   },
   {
-    id: 2,
+    id: 3,
     title: "WeatherRN",
     description:
       "A webapp for tracking city or state weather real time using fahreinheit",
@@ -45,7 +46,7 @@ export default [
     demo: "https://weatherrn-nlsnryn.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "QuizApp",
     description:
       "Quiz app that you can answer some questions and getting score once done",
@@ -55,12 +56,22 @@ export default [
     demo: "https://quizapp-nlsn.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "VueNotes",
     description: "A vue application that you can store some notes",
     technologies: ["Vue"],
     repository: "https://github.com/nlsnryn/My-Vue-Notes",
     image: Notes,
     demo: "https://nelsonryan-my-vue-notes.netlify.app/",
+  },
+  {
+    id: 6,
+    title: "Memes Generator",
+    description:
+      "A react application that generate some memes picture and can input custom text.",
+    technologies: ["React", "Tailwind CSS", "Api"],
+    repository: "https://github.com/nlsnryn/Meme-Generator",
+    image: Meme,
+    demo: "https://nlsn-app-memegen.netlify.app/",
   },
 ];

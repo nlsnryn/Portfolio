@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import socialsData from "../data/socials.js";
+import SocialButton from "../components/SocialButton.vue";
 
 const textContact = ref(["C", "o", "n", "t", "a", "c", "t", " ", "M", "E"]);
 const socials = ref(socialsData);
@@ -27,20 +28,11 @@ const socials = ref(socialsData);
             >{{ textLetter }}</span
           >
         </h1>
-        <p class="text-sm tracking-tighter font-semibold mb-7">
+        <p class="text-sm tracking-tighter font-semibold mb-7 text-center">
           Reach out to me on social media, and let's collaborate, innovate, and
           make magic happen!
         </p>
-        <a
-          v-for="social in socials"
-          :key="social.id"
-          :href="social.link"
-          target="_blank"
-          class="flex justify-center items-center rounded bg-neon-green md:px-5 w-[350px] md:w-[450px] text-md text-center font-medium text-gray-800 transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:bg-neon-green mt-5"
-        >
-          <i :class="social.icon" class="mr-2 text-3xl"></i>
-          <p class="text-gray-800 font-medium text-lg">{{ social.text }}</p></a
-        >
+        <SocialButton :socials="socials" />
       </div>
     </div>
   </div>

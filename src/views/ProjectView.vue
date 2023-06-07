@@ -1,7 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AnimatedPlaceholder from "../components/AnimatedPlaceholder.vue";
+import CardSkeleton from "../components/CardSkeleton.vue";
 import myProjects from "../data/projects.js";
 
+const isLoading = ref(true);
 const title = ref([
   "F",
   "r",
@@ -45,11 +48,31 @@ const title = ref([
   "e",
 ]);
 const projects = ref(myProjects);
+
+onMounted(async () => {
+  await new Promise((res) => setTimeout(res, 1100));
+  isLoading.value = false;
+});
 </script>
 
 <template>
+  <section v-if="isLoading">
+    <div class="flex flex-col justify-center items-center">
+      <AnimatedPlaceholder
+        class="mt-3 w-10/12 md:w-4/12 py-0.5 rounded items-center mb-2 md:mb-4"
+      />
+      <AnimatedPlaceholder
+        class="mt-3 w-11/12 md:w-6/12 rounded items-center"
+      />
+
+      <div class="text-white w-[350px] md:w-[730px] mt-10">
+        <CardSkeleton class="mb-5" />
+        <CardSkeleton class="mb-5 hidden md:flex" />
+      </div>
+    </div>
+  </section>
   <!-- Projects -->
-  <main>
+  <main v-else>
     <div class="flex flex-col justify-center items-center">
       <h1
         class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
@@ -65,8 +88,7 @@ const projects = ref(myProjects);
         class="max-w-2xl text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
       >
         These projects are more than just work; they represent a journey of
-        growth, learning, and achievement. Join me as we explore the milestones
-        and success stories that have shaped my career.
+        growth, learning, and achievement.
       </p>
       <div class="text-white w-[350px] md:w-[730px] mt-10">
         <div

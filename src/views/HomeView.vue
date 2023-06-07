@@ -139,7 +139,9 @@ onMounted(() => {
       class="flex flex-col-reverse md:flex-row justify-center items-center mt-3"
     >
       <div class="text-white w-[350px] md:w-[730px]">
-        <div
+        <a
+          href="../assets/images/capstone.png"
+          download
           class="group text-gray-300 border-2 hover:border-neon-green w-fit text-[11px] flex items-center justify-center font-medium rounded-lg bg-transparent px-3 md:px-4 py-1.5 cursor-pointer transition-all ease-in-out duration-200"
         >
           <h1
@@ -150,7 +152,7 @@ onMounted(() => {
           <i
             class="fa-solid fa-download group-hover:text-neon-green text-sm md:text-lg ml-2"
           ></i>
-        </div>
+        </a>
       </div>
     </div>
 
