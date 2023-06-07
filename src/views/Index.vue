@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
-  <div class="mx-auto pb-10">
+  <div class="pb-10">
     <Navbar />
     <Home />
     <About />
