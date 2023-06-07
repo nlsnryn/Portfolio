@@ -12,8 +12,15 @@ const socials = ref(socialsData);
     id="socials"
     class="flex flex-col md:flex-row justify-center items-center"
   >
-    <div class="text-white w-[350px] md:w-[730px]">
-      <div class="flex flex-col justify-center items-center">
+    <div class="w-[350px] md:w-[730px]">
+      <div class="grid justify-items-center">
+        <img
+          src="../assets/images/upuan.jpg"
+          alt=""
+          class="h-auto w-40 rounded-2xl hover:scale-150 z-10 transition-all duration-200"
+        />
+      </div>
+      <div class="flex flex-col justify-center items-center mt-10">
         <h1
           class="text-2xl text-gray-300 font-semibold tracking-tighter uppercase"
         >

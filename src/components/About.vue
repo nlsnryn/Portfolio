@@ -5,10 +5,7 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
 </script>
 
 <template>
-  <div
-    id="about"
-    class="flex justify-center items-center pt-24 mt-5 md:py-24 md:mt-14"
-  >
+  <div id="about" class="flex justify-center items-center pb-20 pt-36">
     <div class="text-white w-[350px] md:w-[730px] mx-auto">
       <h1
         class="text-gray-300 font-semibold uppercase text-center tracking-tighter text-2xl"

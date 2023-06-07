@@ -8,10 +8,10 @@ import Navbar from "@/components/Navbar.vue";
 
 <template>
   <div class="pb-10">
-    <div class="flex flex-col justify-center items-center">
-      <div class="w-[350px] md:w-[730px]">
-        <Navbar />
-      </div>
+    <div
+      class="flex justify-center opacity-80 items-center w-full bg-zinc-900 fixed top-0 z-10"
+    >
+      <Navbar />
     </div>
     <Home />
     <About />

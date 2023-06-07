@@ -13,12 +13,8 @@ function navClick(navbars) {
 </script>
 
 <template>
-  <nav
-    class="flex flex-col md:flex-row md:justify-center md:items-center gap-4 items-center py-5 w-full md:w-[740px] mx-auto fixed top-0 left-0 right-0 z-10"
-  >
-    <ul
-      class="flex justify-center items-center gap-4 px-6 py-2 bg-neon-green rounded-full border-2 border-neutral-900"
-    >
+  <nav class="flex justify-center py-4">
+    <ul class="flex items-center gap-4 mx-5">
       <a href="#home" @click="navClick('home')" class="navMenu">
         <i class="fa-solid fa-house text-2xl"></i>
         <li v-if="state.currentButton === 'home'" class="text-sm font-semibold">

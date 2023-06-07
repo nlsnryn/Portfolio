@@ -100,10 +100,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="home" class="pt-20">
+  <main id="home">
     <!-- Hero Section -->
     <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-7"
+      class="flex flex-col-reverse md:flex-row justify-center pt-32 items-center"
     >
       <div
         data-aos="fade-right"
