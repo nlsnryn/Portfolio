@@ -1,10 +1,11 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import AnimatedPlaceholder from "../components/AnimatedPlaceholder.vue";
-import CardSkeleton from "../components/CardSkeleton.vue";
 import myProjects from "../data/projects.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const isLoading = ref(true);
+AOS.init();
+
 const title = ref([
   "F",
   "r",
@@ -48,33 +49,14 @@ const title = ref([
   "e",
 ]);
 const projects = ref(myProjects);
-
-onMounted(async () => {
-  await new Promise((res) => setTimeout(res, 1100));
-  isLoading.value = false;
-});
 </script>
 
 <template>
-  <section v-if="isLoading">
-    <div class="flex flex-col justify-center items-center">
-      <AnimatedPlaceholder
-        class="mt-3 w-10/12 md:w-4/12 py-0.5 rounded items-center mb-2 md:mb-4"
-      />
-      <AnimatedPlaceholder
-        class="mt-3 w-11/12 md:w-6/12 rounded items-center"
-      />
-
-      <div class="text-white w-[350px] md:w-[730px] mt-10">
-        <CardSkeleton class="mb-5" />
-        <CardSkeleton class="mb-5 hidden md:flex" />
-      </div>
-    </div>
-  </section>
   <!-- Projects -->
-  <main v-else>
-    <div class="flex flex-col justify-center items-center">
+  <main id="projects">
+    <div class="flex flex-col justify-center items-center py-28">
       <h1
+        data-aos="fade-right"
         class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
       >
         <span
@@ -85,6 +67,7 @@ onMounted(async () => {
         >
       </h1>
       <p
+        data-aos="fade-left"
         class="max-w-2xl text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
       >
         These projects are more than just work; they represent a journey of
@@ -94,7 +77,7 @@ onMounted(async () => {
         <div
           v-for="project in projects"
           :key="project.id"
-          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-5 md:gap-7"
+          class="flex flex-col md:flex-row items-start bg-neutral-900 rounded overflow-hidden w-full mb-5 md:gap-7 mt-10"
         >
           <!--Fixed-->
           <div class="w-full md:w-1/2">

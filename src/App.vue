@@ -4,13 +4,11 @@ import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
-  <main class="w-11/12 mx-auto">
-    <header>
-      <Navbar />
-    </header>
+  <header>
+    <Navbar />
+  </header>
 
-    <RouterView />
-  </main>
+  <RouterView />
 </template>
 
 <style lang="css" scoped>

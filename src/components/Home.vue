@@ -100,12 +100,21 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="pb-20">
+  <main id="home" class="pt-20">
     <!-- Hero Section -->
     <div
       class="flex flex-col-reverse md:flex-row justify-center items-center mt-7"
     >
-      <div class="text-white w-[350px] md:w-[450px]">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        class="text-white w-[350px] md:w-[450px]"
+      >
         <h1
           class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white"
         >
@@ -115,18 +124,19 @@ onMounted(() => {
           Web Developer |
           <span class="text-neon-green glitch">Vue and Laravel</span>
         </h2>
-        <p class="mt-10 text-left">
+        <p class="mt-10 max-w-md text-justify">
           I am a <strong>web developer</strong> who dreams of entering and
           working in the IT industry, utilizing my skills and knowledge in
           technology. I have chosen the path of
-          <strong>web development</strong>, particularly focusing on
-          <strong>Vue and Laravel.</strong> My aim is to create exceptional
+          <strong>web development</strong> and my aim is to create exceptional
           digital experiences, contribute to innovative projects, and
           continuously expand my expertise in the ever-evolving world of
           <strong>web development.</strong>
         </p>
       </div>
       <img
+        data-aos="fade-left"
+        data-aos-duration="1000"
         ref="pfp"
         class="mb-10 md:mb-0 h-[160px] w-[160px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10 object-cover"
         src="../assets/images/nkwelyo.jpg"
@@ -136,7 +146,9 @@ onMounted(() => {
 
     <!-- Resume -->
     <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-3"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+      class="flex flex-col-reverse md:flex-row justify-center items-center mt-5"
     >
       <div class="text-white w-[350px] md:w-[730px]">
         <a
@@ -158,7 +170,9 @@ onMounted(() => {
 
     <!-- Let work -->
     <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center mt-16 md:mt-20"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      class="flex flex-col-reverse md:flex-row justify-center items-center mt-16 md:mt-24"
     >
       <div class="text-white w-[350px] md:w-[730px]">
         <h1
@@ -179,7 +193,11 @@ onMounted(() => {
 
     <!-- Tech Stack -->
 
-    <div class="flex flex-col-reverse md:flex-row justify-center items-center">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      class="flex flex-col-reverse md:flex-row justify-center items-center"
+    >
       <div class="text-white w-[350px] md:w-[730px]">
         <div class="flex flex-wrap items-center gap-x-5 mt-5 justify-start">
           <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
@@ -219,14 +237,14 @@ onMounted(() => {
               height="40"
             />
           </a>
-          <a href="https://www.php.net" target="_blank" rel="noreferrer">
+          <!-- <a href="https://www.php.net" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
               alt="php"
               width="40"
               height="40"
             />
-          </a>
+          </a> -->
           <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"

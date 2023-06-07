@@ -1,54 +1,64 @@
 <script setup>
-import { Icon } from "@iconify/vue";
 import { reactive } from "vue";
-import { RouterLink } from "vue-router";
 
 const state = reactive({
-  currentButton: "home",
+  currentButton: localStorage.getItem("navigation"),
 });
 
 function navClick(navbars) {
   state.currentButton = navbars;
+  localStorage.setItem("navigation", navbars);
+  state.currentButton = localStorage.getItem("navigation");
 }
 </script>
 
 <template>
   <nav
+    data-aos="flip-right"
+    data-aos-duration="2000"
     role="navigation"
     aria-label="navigation"
     id="top-nav"
-    class="flex flex-col md:flex-row md:justify-center md:items-center gap-4 items-center pt-8 pb-8 sm:pb-16 w-full md:w-[740px] mx-auto"
+    class="flex flex-col md:flex-row md:justify-center md:items-center gap-4 items-center py-5 w-full md:w-[740px] mx-auto fixed top-0 left-0 right-0 z-10"
   >
-    <ul class="flex justify-center items-center gap-4 px-3 py-1">
-      <RouterLink
-        to="/"
-        @click="navClick('home')"
-        class="flex items-center gap-2 relative font-semibold text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100 duration-200 ease-in-out"
-      >
+    <ul
+      class="flex justify-center items-center gap-4 px-6 py-2 bg-neon-green rounded-full border-2 border-neutral-900"
+    >
+      <a href="#home" @click="navClick('home')" class="navMenu">
         <i class="fa-solid fa-house text-2xl"></i>
-        <li v-if="state.currentButton === 'home'" class="text-lg">Home</li>
-      </RouterLink>
-      <RouterLink
-        to="/projects"
-        @click="navClick('projects')"
-        class="flex items-center gap-2 relative font-semibold text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100"
+        <li v-if="state.currentButton === 'home'" class="text-sm font-semibold">
+          Home
+        </li>
+      </a>
+      <a href="#about" @click="navClick('about')" class="navMenu">
+        <i class="fa-solid fa-address-card text-2xl"></i>
+        <li
+          v-if="state.currentButton === 'about'"
+          class="text-sm font-semibold"
+        >
+          About
+        </li>
+      </a>
+      <a href="#projects" @click="navClick('projects')" class="navMenu"
         ><i class="fa-solid fa-file text-2xl"></i>
-        <li v-if="state.currentButton === 'projects'" class="text-lg">
+        <li
+          v-if="state.currentButton === 'projects'"
+          class="text-sm font-semibold"
+        >
           Projects
         </li>
-      </RouterLink>
+      </a>
 
-      <RouterLink
-        to="/socials"
-        @click="navClick('contact')"
-        class="flex items-center gap-2 relative font-semibold text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100"
-      >
+      <a href="#socials" @click="navClick('contact')" class="navMenu">
         <i class="fa-solid fa-phone text-2xl"></i>
 
-        <li v-if="state.currentButton === 'contact'" class="text-lg">
+        <li
+          v-if="state.currentButton === 'contact'"
+          class="text-sm font-semibold"
+        >
           Socials
         </li>
-      </RouterLink>
+      </a>
     </ul>
   </nav>
 </template>
