@@ -8,7 +8,11 @@ import Navbar from "@/components/Navbar.vue";
 
 <template>
   <div class="pb-10">
-    <Navbar />
+    <div class="flex flex-col justify-center items-center">
+      <div class="w-[350px] md:w-[730px]">
+        <Navbar />
+      </div>
+    </div>
     <Home />
     <About />
     <Project />
