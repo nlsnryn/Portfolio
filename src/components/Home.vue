@@ -134,7 +134,7 @@ onMounted(() => {
     <!-- Resume -->
     <div class="mt-6">
       <a
-        href="../assets/resume/NelsonRyan-Resume.pdf"
+        href="NelsonRyan-Resume.pdf"
         download
         data-aos="fade-right"
         data-aos-duration="1000"
