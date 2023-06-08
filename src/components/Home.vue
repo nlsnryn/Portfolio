@@ -86,16 +86,16 @@ onMounted(() => {
     pulse: false,
   });
 
-  // animate(
-  //   pfp.value,
-  //   { y: [-6, 6] },
-  //   {
-  //     duration: 2,
-  //     direction: "alternate",
-  //     repeat: 100,
-  //     easing: "ease-in-out",
-  //   }
-  // );
+  animate(
+    pfp.value,
+    { y: [-6, 6] },
+    {
+      duration: 1,
+      direction: "alternate",
+      repeat: 100,
+      easing: "ease-in-out",
+    }
+  );
 });
 </script>
 
@@ -105,13 +105,13 @@ onMounted(() => {
     <div class="flex flex-col-reverse md:flex-row pt-32">
       <div data-aos="fade-right" data-aos-duration="1000" class="text-white">
         <h1
-          class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white z-10"
+          class="font-bold text-3xl md:text-5xl tracking-wide mb-1 text-white z-10 uppercase"
         >
-          Nelson Ryan Arabit
+          Hi! i'm Nelson Ryan
         </h1>
-        <h2 class="text-lg mt-2">
-          Web Developer |
-          <span class="text-neon-green glitch z-10">Vue and Laravel</span>
+        <h2 class="text-lg mt-2 uppercase glitch">
+          Web Developer
+          <span class="text-neon-green glitch z-10"></span>
         </h2>
         <p class="mt-10 max-w-md text-start z-10">
           I am a <strong>web developer</strong> who dreams of entering and
@@ -131,20 +131,22 @@ onMounted(() => {
     </div>
 
     <!-- Resume -->
-    <div class="mt-5">
+    <div class="mt-6">
       <a
         href="../assets/images/capstone.png"
         download
-        class="group text-gray-300 border-2 hover:border-neon-green w-fit text-[11px] flex items-center justify-center font-medium rounded-lg bg-transparent px-3 md:px-4 py-1.5 cursor-pointer transition-all ease-in-out duration-200"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        class="group w-fit flex items-center justify-center rounded-xl font-medium bg-zinc-900 hover:bg-neon-green px-6 py-3 md:py-2 cursor-pointer transition-all ease-in-out duration-200 shadow-2xl"
       >
         <h1
-          class="text-sm md:text-lg group-hover:text-neon-green tracking-tighter"
+          class="text-xs md:text-lg text-slate-50 group-hover:text-zinc-900 tracking-tighter uppercase"
         >
-          Resume
+          Download cv
         </h1>
-        <i
-          class="fa-solid fa-download group-hover:text-neon-green text-sm md:text-lg ml-2"
-        ></i>
+        <!-- <i
+          class="fa-solid fa-download text-slate-100 text-sm md:text-lg ml-2"
+        ></i> -->
       </a>
     </div>
 
@@ -223,6 +225,11 @@ onMounted(() => {
           />
         </a>
       </div>
+    </div>
+
+    <div class="w-full grid justify-items-center mt-16 sm:mt-32 mb-10 sm:mb-20">
+      <i class="fa-solid fa-angles-down text-neon-green text-4xl" ref="pfp">
+      </i>
     </div>
   </main>
 </template>

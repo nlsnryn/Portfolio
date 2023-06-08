@@ -90,7 +90,7 @@ const projects = ref(myProjects);
             <h1 class="mt-3 text-white text-lg font-bold uppercase">
               {{ project.title }}
             </h1>
-            <p class="text-xs mt-1">{{ project.description }}</p>
+            <p class="text-xs mt-1 mr-3">{{ project.description }}</p>
             <div class="flex gap-2 my-4 flex-wrap mr-5">
               <div
                 v-for="(tech, index) in project.technologies"

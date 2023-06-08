@@ -20,7 +20,7 @@ export default [
     id: 2,
     title: "Skillable",
     description:
-      "It is a application that you can create account and login. You can also store, update and delete some notes or skills",
+      "It is an application wherein you can create account and login. You can also store, update and delete some notes or skills",
     technologies: [
       "Vue",
       "JavaScript",
@@ -50,7 +50,7 @@ export default [
     title: "QuizApp",
     description:
       "Quiz app that you can answer some questions and getting score once done",
-    technologies: ["Vue"],
+    technologies: ["Vue", "CSS"],
     repository: "https://github.com/nlsnryn/Quiz-App",
     image: QuizApp,
     demo: "https://quizapp-nlsn.netlify.app/",
@@ -59,7 +59,7 @@ export default [
     id: 5,
     title: "VueNotes",
     description: "A vue application that you can store some notes",
-    technologies: ["Vue"],
+    technologies: ["Vue", "CSS"],
     repository: "https://github.com/nlsnryn/My-Vue-Notes",
     image: Notes,
     demo: "https://nelsonryan-my-vue-notes.netlify.app/",

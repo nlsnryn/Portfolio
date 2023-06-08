@@ -5,7 +5,7 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
 </script>
 
 <template>
-  <div id="about" class="pb-20 pt-24">
+  <div id="about" class="pb-10 md:pb-20 pt-24">
     <h1
       class="text-gray-300 font-semibold uppercase text-center tracking-tighter text-2xl"
     >
@@ -34,17 +34,17 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
           Work Experience
         </h1>
         <h2 class="text-xs font-semibold uppercase text-neon-green mt-2">
-          Laravel Api Developer Intern | Neksjob Corp.
+          Web Developer Intern | Neksjob Corp.
         </h2>
         <h1 class="text-xs font-medium uppercase">Jan - April 2023</h1>
         <p class="text-sm text-start mt-5">
           As a web developer intern, I'm maintaining and enhancing company
-          websites, enabling employers to efficiently monitor applicants. I
-          excel in creating APIs and managing tokens to facilitate seamless
-          integration with the systems I build. Through my work, I have
-          extensively explored and utilized technologies such as Laravel API,
-          Sanctum, Postman, JWT, and honed my searching skills to deliver
-          exceptional results.
+          websites, created some features to enable employers to efficiently
+          monitor applicants. I excel in creating APIs and managing tokens to
+          facilitate seamless integration with the systems I build. Through my
+          work, I have extensively explored and utilized technologies such as
+          Laravel API, Sanctum, Postman, JWT, and honed my searching skills to
+          deliver exceptional results.
         </p>
       </div>
       <div class="w-full md:w-1/2 -mt-1">
