@@ -55,7 +55,7 @@ const projects = ref(myProjects);
   <main id="projects" class="">
     <div class="flex flex-col pt-16 pb-28 text-center">
       <h1
-        class="text-sm md:text-2xl text-gray-300 font-semibold uppercase tracking-tighter"
+        class="md:text-2xl text-gray-300 text-lg font-medium tracking-tighter uppercase"
       >
         <span
           v-for="(letter, index) in title"
@@ -64,9 +64,7 @@ const projects = ref(myProjects);
           >{{ letter }}</span
         >
       </h1>
-      <p
-        class="text-xs md:text-sm text-center tracking-tighter font-semibold mt-4"
-      >
+      <p class="text-sm md:text-lg text-center font-medium mt-4">
         These projects are more than just work; they represent a journey of
         growth, learning, and achievement.
       </p>
