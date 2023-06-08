@@ -134,7 +134,7 @@ onMounted(() => {
     <!-- Resume -->
     <div class="mt-6">
       <a
-        href="../assets/images/capstone.png"
+        href="../assets/resume/NelsonRyan-Resume.pdf"
         download
         data-aos="fade-right"
         data-aos-duration="1000"
@@ -145,9 +145,6 @@ onMounted(() => {
         >
           Download cv
         </h1>
-        <!-- <i
-          class="fa-solid fa-download text-slate-100 text-sm md:text-lg ml-2"
-        ></i> -->
       </a>
     </div>
 

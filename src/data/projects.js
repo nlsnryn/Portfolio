@@ -4,6 +4,7 @@ import QuizApp from "../assets/images/QuizApp.png";
 import Notes from "../assets/images/Notes.png";
 import TPJ from "../assets/images/capstone.png";
 import Meme from "../assets/images/Memegen.png";
+import Pinia from "../assets/images/Pinia.png";
 
 export default [
   {
@@ -57,6 +58,15 @@ export default [
   },
   {
     id: 5,
+    title: "I need to do",
+    description: "A vue application to do notes",
+    technologies: ["Vue", "Tailwind CSS", "Pinia"],
+    repository: "https://github.com/nlsnryn/Pinia-Vue",
+    image: Pinia,
+    demo: "https://ineedtodo.netlify.app/",
+  },
+  {
+    id: 6,
     title: "VueNotes",
     description: "A vue application that you can store some notes",
     technologies: ["Vue", "CSS"],
@@ -65,7 +75,7 @@ export default [
     demo: "https://nelsonryan-my-vue-notes.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Memes Generator",
     description:
       "A react application that generate some memes picture and can input custom text.",
