@@ -107,13 +107,14 @@ onMounted(() => {
         <h1
           class="font-bold text-3xl md:text-5xl tracking-wide mb-1 text-white z-10 uppercase"
         >
-          Hi! i'm Nelson Ryan
+          <span class="text-xl sm:text-3xl text-neon-green">Hi there!</span>
+          <span class="block">i'm Nelson Ryan</span>
         </h1>
-        <h2 class="text-lg mt-2 uppercase glitch">
+        <h2 class="text-lg mt-2 absolute uppercase glitch">
           Web Developer
           <span class="text-neon-green glitch z-10"></span>
         </h2>
-        <p class="mt-10 max-w-md text-start z-10">
+        <p class="mt-14 max-w-md text-start z-10">
           I am a <strong>web developer</strong> who dreams of entering and
           working in the IT industry, utilizing my skills and knowledge in
           technology. I have chosen the path of
