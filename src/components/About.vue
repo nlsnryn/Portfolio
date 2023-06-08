@@ -17,9 +17,9 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
       >
     </h1>
     <p class="text-sm font-medium text-justify mt-5">
-      I am a Bachelor of Science in Information Technology graduate with a
-      specialization in programming. I have two years of coding experience and I
-      am a self-taught programmer. During my studies, I worked as a capstone
+      I am a Bachelor of Science in Information Technology graduate with a major
+      in programming. I have two years of coding experience and I am a
+      self-taught programmer. During my studies, I worked as a capstone
       programmer within our group, and I also gained valuable experience as a
       Laravel API developer during my internship. I am currently learning Vue.js
       and Laravel to become a full-stack developer and improve my web
