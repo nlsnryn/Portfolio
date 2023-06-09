@@ -158,8 +158,9 @@ onMounted(() => {
 
     <!-- Resume -->
     <div class="mt-6">
-      <button
-        @click="downloadResume"
+      <a
+        :href="resume"
+        download
         data-aos="fade-right"
         data-aos-duration="1000"
         class="group w-fit flex items-center justify-center rounded-xl font-medium bg-zinc-900 hover:bg-neon-green px-6 py-3 md:py-2 cursor-pointer transition-all ease-in-out duration-200 shadow-2xl"
@@ -169,7 +170,7 @@ onMounted(() => {
         >
           Download cv
         </h1>
-      </button>
+      </a>
     </div>
 
     <!-- Let work -->
