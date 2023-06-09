@@ -2,6 +2,7 @@
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
 import { onMounted, onUnmounted, ref } from "vue";
+import resume from "../assets/resume/NelsonRyan-Resume.pdf";
 
 const pfp = ref(null);
 
@@ -46,7 +47,7 @@ const type = () => {
 };
 
 function downloadResume() {
-  fetch("/NelsonRyan-Resume.pdf")
+  fetch(resume)
     .then((res) => res.blob())
     .then((blob) => {
       console.log(blob);
