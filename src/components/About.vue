@@ -16,7 +16,7 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
         >{{ letter }}</span
       >
     </h1>
-    <p class="text-sm font-medium text-justify mt-5">
+    <p class="text-sm md:text-base font-medium text-start mt-5">
       I am a Bachelor of Science in Information Technology graduate with a major
       in web development. I have two years of coding experience and I am a
       self-taught programmer. During my studies, I worked as a capstone
