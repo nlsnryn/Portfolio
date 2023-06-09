@@ -49,15 +49,23 @@ function downloadResume() {
   fetch("/NelsonRyan-Resume.pdf")
     .then((res) => res.blob())
     .then((blob) => {
-      const url = URL.createObjectURL(blob);
+      console.log(blob);
 
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "NelsonRyan-Resume.pdf";
-      a.click();
+      // const file = new File([blob], "pdf", { type: "application/pdf" });
+      const fileReader = new FileReader();
+      fileReader.onload = function () {
+        const dataURL = fileReader.result;
+        console.log(dataURL);
 
-      // Clean up the created URL object after the download has started
-      URL.revokeObjectURL(url);
+        // Use the dataURL as needed, e.g., display or download the PDF
+
+        const a = document.createElement("a");
+        a.href = dataURL;
+        a.download = "NelsonRyan-Resume.pdf";
+        a.click();
+      };
+      fileReader.readAsDataURL(blob);
+      URL.revokeObjectURL(dataURL);
     });
 }
 
