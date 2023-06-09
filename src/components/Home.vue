@@ -45,6 +45,22 @@ const type = () => {
   typeCharacter();
 };
 
+function downloadResume() {
+  fetch("/NelsonRyan-Resume.pdf")
+    .then((res) => res.blob())
+    .then((blob) => {
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "NelsonRyan-Resume.pdf";
+      a.click();
+
+      // Clean up the created URL object after the download has started
+      URL.revokeObjectURL(url);
+    });
+}
+
 const toggleCursor = () => {
   isCursorVisible.value = !isCursorVisible.value;
   setTimeout(toggleCursor, 500);
@@ -133,9 +149,8 @@ onMounted(() => {
 
     <!-- Resume -->
     <div class="mt-6">
-      <a
-        href="/NelsonRyan-Resume.pdf"
-        download
+      <button
+        @click="downloadResume"
         data-aos="fade-right"
         data-aos-duration="1000"
         class="group w-fit flex items-center justify-center rounded-xl font-medium bg-zinc-900 hover:bg-neon-green px-6 py-3 md:py-2 cursor-pointer transition-all ease-in-out duration-200 shadow-2xl"
@@ -145,7 +160,7 @@ onMounted(() => {
         >
           Download cv
         </h1>
-      </a>
+      </button>
     </div>
 
     <!-- Let work -->
