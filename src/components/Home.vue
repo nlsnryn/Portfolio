@@ -46,30 +46,6 @@ const type = () => {
   typeCharacter();
 };
 
-// function downloadResume() {
-//   fetch(resume)
-//     .then((res) => res.blob())
-//     .then((blob) => {
-//       console.log(blob);
-
-//       // const file = new File([blob], "pdf", { type: "application/pdf" });
-//       const fileReader = new FileReader();
-//       fileReader.onload = function () {
-//         const dataURL = fileReader.result;
-//         console.log(dataURL);
-
-//         // Use the dataURL as needed, e.g., display or download the PDF
-
-//         const a = document.createElement("a");
-//         a.href = dataURL;
-//         a.download = "NelsonRyan-Resume.pdf";
-//         a.click();
-//       };
-//       fileReader.readAsDataURL(blob);
-//       URL.revokeObjectURL(dataURL);
-//     });
-// }
-
 const toggleCursor = () => {
   isCursorVisible.value = !isCursorVisible.value;
   setTimeout(toggleCursor, 500);
