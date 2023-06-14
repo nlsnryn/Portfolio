@@ -115,6 +115,16 @@ const projects = ref(myProjects);
               </a>
 
               <a
+                v-if="project.api"
+                :href="project.api"
+                target="_blank"
+                class="bg-neutral-800 p-1 px-3 py-2 flex items-center gap-1 mt-1 rounded-md hover:-translate-y-1 transition-all duration-200"
+              >
+                <i class="fa-solid fa-server text-white"></i>
+                <p class="uppercase text-[10px]">API</p>
+              </a>
+
+              <a
                 v-if="project.demo"
                 :href="project.demo"
                 target="_blank"
