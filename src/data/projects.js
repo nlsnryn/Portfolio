@@ -54,7 +54,7 @@ export default [
     ],
     repository: "https://github.com/nlsnryn/Lazhapee",
     image: Lazhapee,
-    demo: false,
+    demo: "https://lazhapee.netlify.app/",
     api: "https://fakestoreapi.com/",
   },
   {
