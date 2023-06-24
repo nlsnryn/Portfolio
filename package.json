@@ -12,10 +12,12 @@
     "aos": "^2.3.4",
     "gsap": "^3.12.1",
     "motion": "^10.16.2",
+    "pinia": "^2.1.4",
     "powerglitch": "^2.3.2",
     "tailwind-scrollbar": "^3.0.4",
     "vue": "^3.3.2",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

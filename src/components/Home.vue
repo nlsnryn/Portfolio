@@ -3,7 +3,9 @@ import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
 import { onMounted, onUnmounted, ref } from "vue";
 import resume from "../assets/resume/NelsonRyan-Resume.pdf";
+import { useNavbarStore } from "../store/navbar.store";
 
+const navbarStore = useNavbarStore();
 const pfp = ref(null);
 
 const texts = [" collaborate", " innovate", " code!"];
@@ -99,7 +101,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="home" class="">
+  <main id="home" @mouseenter="navbarStore.navClick('home')" class="">
     <!-- Hero Section -->
     <div class="flex flex-col-reverse md:flex-row pt-32">
       <div data-aos="fade-right" data-aos-duration="1000" class="text-white">

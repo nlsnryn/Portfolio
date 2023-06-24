@@ -1,11 +1,18 @@
 <script setup>
 import { ref } from "vue";
+import { useNavbarStore } from "../store/navbar.store";
+
+const navbarStore = useNavbarStore();
 
 const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
 </script>
 
 <template>
-  <div id="about" class="pb-10 md:pb-20 pt-24">
+  <div
+    id="about"
+    @mouseenter="navbarStore.navClick('about')"
+    class="pb-10 md:pb-20 pt-24"
+  >
     <h1
       class="text-gray-300 font-semibold uppercase text-center tracking-tighter text-2xl"
     >

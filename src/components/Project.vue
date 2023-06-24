@@ -3,9 +3,11 @@ import { ref } from "vue";
 import myProjects from "../data/projects.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavbarStore } from "../store/navbar.store.js";
 
 AOS.init();
 
+const navbarStore = useNavbarStore();
 const title = ref([
   "F",
   "r",
@@ -52,7 +54,7 @@ const projects = ref(myProjects);
 </script>
 
 <template>
-  <main id="projects" class="">
+  <main id="projects" @mouseenter="navbarStore.navClick('projects')" class="">
     <div class="flex flex-col pt-16 pb-28 text-center">
       <h1
         class="md:text-2xl text-gray-300 text-lg font-medium tracking-tighter uppercase"

@@ -2,13 +2,19 @@
 import { ref } from "vue";
 import socialsData from "../data/socials.js";
 import SocialButton from "./SocialButton.vue";
+import { useNavbarStore } from "../store/navbar.store";
 
+const navbarStore = useNavbarStore();
 const textContact = ref(["C", "o", "n", "t", "a", "c", "t", " ", "M", "E"]);
 const socials = ref(socialsData);
 </script>
 
 <template>
-  <div id="socials" class="flex flex-col relative mt-20">
+  <div
+    id="socials"
+    @mouseenter="navbarStore.navClick('contact')"
+    class="flex flex-col relative mt-20"
+  >
     <img
       src="../assets/images/nobg1.png"
       alt=""
