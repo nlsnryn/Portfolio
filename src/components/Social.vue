@@ -8,13 +8,9 @@ const navbarStore = useNavbarStore();
 const textContact = ref(["C", "o", "n", "t", "a", "c", "t", " ", "M", "E"]);
 const socials = ref(socialsData);
 </script>
-
+<!-- @mouseenter="navbarStore.navClick('contact')" -->
 <template>
-  <div
-    id="socials"
-    @mouseenter="navbarStore.navClick('contact')"
-    class="flex flex-col relative mt-20"
-  >
+  <section id="socials" class="flex flex-col relative mt-20">
     <img
       src="../assets/images/nobg1.png"
       alt=""
@@ -41,5 +37,5 @@ const socials = ref(socialsData);
         <SocialButton :socials="socials" />
       </div>
     </div>
-  </div>
+  </section>
 </template>

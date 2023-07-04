@@ -6,13 +6,9 @@ const navbarStore = useNavbarStore();
 
 const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
 </script>
-
+<!-- @mouseenter="navbarStore.navClick('about')" -->
 <template>
-  <div
-    id="about"
-    @mouseenter="navbarStore.navClick('about')"
-    class="pb-10 md:pb-20 pt-24"
-  >
+  <section id="about" class="pb-10 md:pb-20 pt-24">
     <h1
       class="text-gray-300 font-semibold uppercase text-center tracking-tighter text-2xl"
     >
@@ -74,5 +70,5 @@ const about = ref(["A", "b", "o", "u", "t", " ", "M", "e"]);
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>

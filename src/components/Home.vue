@@ -1,7 +1,16 @@
 <script setup>
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
-import { onMounted, onUnmounted, ref } from "vue";
+import {
+  onMounted,
+  onUnmounted,
+  onBeforeUnmount,
+  ref,
+  nextTick,
+  defineProps,
+  defineEmits,
+  getCurrentInstance,
+} from "vue";
 import resume from "../assets/resume/NelsonRyan-Resume.pdf";
 import { useNavbarStore } from "../store/navbar.store";
 
@@ -99,9 +108,9 @@ onMounted(() => {
   );
 });
 </script>
-
+<!-- @mouseenter="navbarStore.navClick('home')"  -->
 <template>
-  <main id="home" @mouseenter="navbarStore.navClick('home')" class="">
+  <section id="home" ref="sectionRef" class="">
     <!-- Hero Section -->
     <div class="flex flex-col-reverse md:flex-row pt-32">
       <div data-aos="fade-right" data-aos-duration="1000" class="text-white">
@@ -230,7 +239,7 @@ onMounted(() => {
       <i class="fa-solid fa-angles-down text-neon-green text-4xl" ref="pfp">
       </i>
     </div>
-  </main>
+  </section>
 </template>
 
 <style>

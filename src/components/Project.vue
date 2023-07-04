@@ -52,9 +52,9 @@ const title = ref([
 ]);
 const projects = ref(myProjects);
 </script>
-
+<!-- @mouseenter="navbarStore.navClick('projects')" -->
 <template>
-  <main id="projects" @mouseenter="navbarStore.navClick('projects')" class="">
+  <section id="projects" class="">
     <div class="flex flex-col pt-16 pb-28 text-center">
       <h1
         class="md:text-2xl text-gray-300 text-lg font-medium tracking-tighter uppercase"
@@ -139,5 +139,5 @@ const projects = ref(myProjects);
         </div>
       </div>
     </div>
-  </main>
+  </section>
 </template>

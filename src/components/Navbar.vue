@@ -1,63 +1,56 @@
 <script setup>
 import { useNavbarStore } from "../store/navbar.store";
+import { ref, onMounted } from "vue";
 
 const navbarStore = useNavbarStore();
+const navItems = ref([]);
+
+onMounted(() => {
+  navItems.value = [
+    {
+      id: "home",
+      label: "Home",
+      icon: "fa-solid fa-house ",
+      active: true,
+    },
+    {
+      id: "about",
+      label: "About",
+      icon: "fa-solid fa-address-card",
+      active: false,
+    },
+    {
+      id: "projects",
+      label: "Projects",
+      icon: "fa-solid fa-file",
+      active: false,
+    },
+    {
+      id: "socials",
+      label: "Socials",
+      icon: "fa-solid fa-phone",
+      active: false,
+    },
+  ];
+});
 </script>
+<!-- @click="navbarStore.navClick(item.id)" -->
 
 <template>
   <nav class="flex justify-center py-4">
     <ul class="flex items-center gap-7 mx-5">
       <a
-        v-scroll-to="'#home'"
-        @click="navbarStore.navClick('home')"
+        v-for="item in navItems"
+        :key="item.id"
+        v-scroll-to="`#${item.id}`"
         class="navMenu transition-all duration-200"
       >
-        <i class="fa-solid fa-house text-2xl"></i>
+        <i class="text-2xl" :class="item.icon"></i>
         <li
-          v-if="navbarStore.activedButton === 'home'"
-          class="text-sm font-semibold"
+          v-if="navbarStore.activedButton === item.id"
+          class="text-sm font-semibold nav-link"
         >
-          Home
-        </li>
-      </a>
-      <a
-        v-scroll-to="'#about'"
-        @click="navbarStore.navClick('about')"
-        class="navMenu transition-all duration-200"
-      >
-        <i class="fa-solid fa-address-card text-2xl"></i>
-        <li
-          v-if="navbarStore.activedButton === 'about'"
-          class="text-sm font-semibold"
-        >
-          About
-        </li>
-      </a>
-      <a
-        v-scroll-to="'#projects'"
-        @click="navbarStore.navClick('projects')"
-        class="navMenu transition-all duration-200"
-        ><i class="fa-solid fa-file text-2xl"></i>
-        <li
-          v-if="navbarStore.activedButton === 'projects'"
-          class="text-sm font-semibold"
-        >
-          Projects
-        </li>
-      </a>
-
-      <a
-        v-scroll-to="'#socials'"
-        @click="navbarStore.navClick('contact')"
-        class="navMenu transition-all duration-200"
-      >
-        <i class="fa-solid fa-phone text-2xl"></i>
-
-        <li
-          v-if="navbarStore.activedButton === 'contact'"
-          class="text-sm font-semibold"
-        >
-          Socials
+          {{ item.label }}
         </li>
       </a>
     </ul>
