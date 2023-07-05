@@ -1,11 +1,18 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import Home from "@/components/Home.vue";
 import About from "../components/About.vue";
 import Project from "@/components/Project.vue";
 import Social from "@/components/Social.vue";
 import Navbar from "@/components/Navbar.vue";
 import { useNavbarStore } from "../store/navbar.store";
+
+const components = {
+  Home,
+  About,
+  Project,
+  Social,
+};
 
 const navbarStore = useNavbarStore();
 onMounted(() => {
@@ -40,9 +47,8 @@ onMounted(() => {
     <Navbar />
   </div>
   <div class="pb-10 mx-auto w-11/12 max-w-3xl relative">
-    <Home />
-    <About />
-    <Project />
-    <Social />
+    <div v-for="component in components" :key="component">
+      <component :is="component"></component>
+    </div>
   </div>
 </template>

@@ -1,20 +1,9 @@
 <script setup>
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
-import {
-  onMounted,
-  onUnmounted,
-  onBeforeUnmount,
-  ref,
-  nextTick,
-  defineProps,
-  defineEmits,
-  getCurrentInstance,
-} from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import resume from "../assets/resume/NelsonRyan-Resume.pdf";
-import { useNavbarStore } from "../store/navbar.store";
 
-const navbarStore = useNavbarStore();
 const pfp = ref(null);
 
 const texts = [" collaborate", " innovate", " code!"];

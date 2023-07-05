@@ -34,7 +34,6 @@ onMounted(() => {
   ];
 });
 </script>
-<!-- @click="navbarStore.navClick(item.id)" -->
 
 <template>
   <nav class="flex justify-center py-4">

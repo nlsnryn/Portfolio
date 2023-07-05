@@ -2,9 +2,7 @@
 import { ref } from "vue";
 import socialsData from "../data/socials.js";
 import SocialButton from "./SocialButton.vue";
-import { useNavbarStore } from "../store/navbar.store";
 
-const navbarStore = useNavbarStore();
 const textContact = ref(["C", "o", "n", "t", "a", "c", "t", " ", "M", "E"]);
 const socials = ref(socialsData);
 </script>
