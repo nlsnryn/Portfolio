@@ -54,7 +54,7 @@ const projects = ref(myProjects);
 
 <template>
   <section id="projects" class="">
-    <div class="flex flex-col pt-16 pb-28 text-center">
+    <div class="flex flex-col pt-20 pb-28 text-center">
       <h1
         class="md:text-2xl text-gray-300 text-lg font-medium tracking-tighter uppercase"
       >

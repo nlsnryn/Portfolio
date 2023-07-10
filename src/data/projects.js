@@ -7,6 +7,8 @@ import Meme from "../assets/images/Memegen.png";
 import Pinia from "../assets/images/Pinia.png";
 import Lazhapee from "../assets/images/Lazhapee.png";
 import Laragigs from "../assets/images/Laragigs.png";
+import Conversion from "../assets/images/Conversion.png";
+import FlowerStore from "../assets/images/FlowerStore.png";
 
 export default [
   {
@@ -30,7 +32,7 @@ export default [
       "JavaScript",
       "Tailwind CSS",
       "Laravel",
-      "Rest Api",
+      "Rest API",
       "Pinia",
       "MySQL",
       "Postman",
@@ -48,7 +50,7 @@ export default [
       "Vue",
       "JavaScript",
       "Tailwind CSS",
-      "Fake Store Api",
+      "Fake Store API",
       "Pinia",
       "Axios",
     ],
@@ -62,7 +64,13 @@ export default [
     title: "WeatherRN",
     description:
       "A webapp for tracking city or state weather real time using fahreinheit",
-    technologies: ["Vue", "JavaScript", "Tailwind CSS", "Axios", "Api"],
+    technologies: [
+      "Vue",
+      "JavaScript",
+      "Tailwind CSS",
+      "Axios",
+      "OpenWeather api",
+    ],
     repository: "https://github.com/nlsnryn/WeatherNR",
     image: Weather,
     demo: "https://weatherrn-nlsnryn.netlify.app/",
@@ -119,5 +127,37 @@ export default [
     image: Laragigs,
     demo: false,
     api: false,
+  },
+  {
+    id: 10,
+    title: "Converstion Number to Words",
+    description:
+      "Laravel application that can convert number to words and vice versa.",
+    technologies: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    repository: "https://github.com/nlsnryn/Backend-Assignment-CHANZ-IT",
+    image: Conversion,
+    demo: false,
+    api: false,
+  },
+  {
+    id: 11,
+    title: "FlowerStore",
+    description:
+      "A fullstack e-commerce website. This is my Fullstack Developer Exam in FlowerStorePH Company.",
+    technologies: [
+      "Vue",
+      "JavaScript",
+      "Tailwind CSS",
+      "Laravel API",
+      "Rest API",
+      "Pinia",
+      "MySQL",
+      "Postman",
+      "Axios",
+    ],
+    repository: "https://github.com/nlsnryn/flowerstore.UI",
+    image: FlowerStore,
+    demo: "https://flowerstore-project.netlify.app/",
+    api: "https://github.com/nlsnryn/flowerstore.API",
   },
 ];

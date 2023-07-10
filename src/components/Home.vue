@@ -2,7 +2,10 @@
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
 import { onMounted, onUnmounted, ref } from "vue";
-import resume from "../assets/resume/NelsonRyan-Resume.pdf";
+import resume from "@/assets/resume/NelsonRyan-Resume.pdf";
+import Pinia from "@/assets/images/pinia.svg";
+import Axios from "@/assets/images/axios.svg";
+import Github from "@/assets/images/github-mark-white.svg";
 
 const pfp = ref(null);
 
@@ -167,7 +170,9 @@ onMounted(() => {
     <!-- Tech Stack -->
 
     <div data-aos="fade-up" data-aos-duration="2000">
-      <div class="flex flex-wrap items-center gap-x-5 mt-5 justify-start">
+      <div
+        class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-5 justify-start"
+      >
         <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
         <i class="fa-brands fa-css3-alt text-4xl text-blue-600"></i>
         <i class="fa-brands fa-square-js text-4xl text-yellow-500"></i>
@@ -196,7 +201,9 @@ onMounted(() => {
             height="40"
           />
         </a>
-
+        <a href="https://github.com/nlsnryn" target="_blank" rel="noreferrer">
+          <img :src="Github" alt="github" width="35" height="35" />
+        </a>
         <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
@@ -220,6 +227,16 @@ onMounted(() => {
             width="40"
             height="40"
           />
+        </a>
+        <a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer">
+          <img :src="Pinia" alt="pinia" width="30" height="30" />
+        </a>
+        <a
+          href="https://www.npmjs.com/package/axios"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img :src="Axios" alt="axios" width="100" height="100" />
         </a>
       </div>
     </div>
