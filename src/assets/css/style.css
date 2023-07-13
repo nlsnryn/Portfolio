@@ -25,3 +25,7 @@ a {
 .navMenu {
   @apply flex items-center gap-2 relative font-semibold text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100 duration-200 ease-in-out cursor-pointer opacity-100;
 }
+
+.style-text {
+  @apply uppercase text-xs font-medium tracking-wide;
+}

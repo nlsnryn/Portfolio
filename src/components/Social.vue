@@ -25,9 +25,7 @@ const socials = ref(socialsData);
           >{{ textLetter }}</span
         >
       </h1>
-      <p
-        class="text-sm max-w-sm tracking-tighter text-white font-semibold mb-7 text-center mt-5 z-10"
-      >
+      <p class="max-w-sm text-white style-text mb-7 text-center mt-5 z-10">
         Reach out to me on social media, and let's collaborate, innovate, and
         make magic happen!
       </p>

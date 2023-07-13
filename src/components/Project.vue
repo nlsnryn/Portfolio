@@ -65,7 +65,7 @@ const projects = ref(myProjects);
           >{{ letter }}</span
         >
       </h1>
-      <p class="text-sm md:text-lg text-center font-medium mt-4">
+      <p class="text-center mt-4 style-text">
         These projects are more than just work; they represent a journey of
         growth, learning, and achievement.
       </p>

@@ -102,7 +102,7 @@ onMounted(() => {
 </script>
 <!-- @mouseenter="navbarStore.navClick('home')"  -->
 <template>
-  <section id="home" ref="sectionRef" class="">
+  <section id="home" ref="sectionRef" class="antialiased">
     <!-- Hero Section -->
     <div class="flex flex-col-reverse md:flex-row pt-32">
       <div data-aos="fade-right" data-aos-duration="1000" class="text-white">
@@ -116,7 +116,7 @@ onMounted(() => {
           Web Developer
           <span class="text-neon-green glitch z-10"></span>
         </h2>
-        <p class="mt-14 max-w-md text-start z-10">
+        <p class="mt-14 max-w-md text-start z-10 style-text">
           I am a <strong>web developer</strong> who dreams of entering and
           working in the IT industry, utilizing my skills and knowledge in
           technology. I have chosen the path of
