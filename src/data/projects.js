@@ -37,6 +37,7 @@ export default [
       "Pinia",
       "MySQL",
       "Postman",
+      "Axios",
     ],
     repository: "https://github.com/nlsnryn/Music-Project.UI",
     image: MusicApp,
