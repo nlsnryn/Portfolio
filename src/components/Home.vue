@@ -2,7 +2,7 @@
 import { animate } from "motion";
 import { PowerGlitch } from "powerglitch";
 import { onMounted, onUnmounted, ref } from "vue";
-import resume from "@/assets/resume/NelsonRyan-Resume.pdf";
+import resume from "@/assets/resume/Arabit-Nelson-Ryan.pdf";
 import Pinia from "@/assets/images/pinia.svg";
 import Axios from "@/assets/images/axios.svg";
 import Github from "@/assets/images/github-mark-white.svg";
@@ -113,17 +113,17 @@ onMounted(() => {
           <span class="block">i'm Nelson Ryan</span>
         </h1>
         <h2 class="text-lg mt-2 absolute uppercase glitch">
-          Web Developer
+          Programmer
           <span class="text-neon-green glitch z-10"></span>
         </h2>
         <p class="mt-14 max-w-md text-start z-10 style-text">
-          I am a <strong>web developer</strong> who dreams of entering and
+          I am a <strong>developer</strong> who dreams of entering and
           working in the IT industry, utilizing my skills and knowledge in
           technology. I have chosen the path of
-          <strong>web development</strong> and my aim is to create exceptional
+          <strong>programming</strong> and my aim is to create exceptional
           digital experiences, contribute to innovative projects, and
           continuously expand my expertise in the ever-evolving world of
-          <strong>web development.</strong>
+          <strong>technology</strong>
         </p>
       </div>
       <img
